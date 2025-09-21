@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Family Feud</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="game-container">
+        <div id="question-counter">Question 1/15</div>
+        <h1 id="question">Name something that might be brewing.</h1>
+        <div id="answer-board">
+            <div class="answer-card">
+                <div class="answer-content">
+                    <span class="answer-text">Coffee</span>
+                    <span class="answer-score">50</span>
+                </div>
+            </div>
+            <div class="answer-card">
+                <div class="answer-content">
+                    <span class="answer-text">Tea</span>
+                    <span class="answer-score">30</span>
+                </div>
+            </div>
+            <div class="answer-card">
+                <div class="answer-content">
+                    <span class="answer-text">Beer</span>
+                    <span class="answer-score">15</span>
+                </div>
+            </div>
+            <div class="answer-card">
+                <div class="answer-content">
+                    <span class="answer-text">Trouble</span>
+                    <span class="answer-score">5</span>
+                </div>
+            </div>
+        </div>
+        <div class="button-container">
+            <button id="strike-button">STRIKE</button>
+            <button id="next-button">NEXT QUESTION</button>
+        </div>
+    </div>
+
+    <div id="strike-overlay">
+        <div id="strike-x">X</div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
