@@ -149,9 +149,7 @@ document.addEventListener('DOMContentLoaded', () => {
     function updateQuestion() {
         const question = questions[currentQuestion];
         questionElement.textContent = question.question;
-        questionCounter.textContent = `Question ${currentQuestion + 1}/19`; // Fix 4: Change from 15 to 19
-
-        // Update answer cards
+        questionCounter.textContent = `Question ${currentQuestion + 1}/15`; 
         const answerCards = answerBoard.querySelectorAll('.answer-card');
         answerCards.forEach((card, index) => {
             const answerText = card.querySelector('.answer-text');
@@ -161,24 +159,18 @@ document.addEventListener('DOMContentLoaded', () => {
             card.classList.remove('revealed');
         });
     }
-
-    // Handle showing the strike "X"
     strikeButton.addEventListener('click', () => {
         strikeOverlay.classList.add('visible');
         setTimeout(() => {
             strikeOverlay.classList.remove('visible');
         }, 1000);
     });
-
-    // Handle revealing answers
     const answerCards = document.querySelectorAll('.answer-card');
     answerCards.forEach(card => {
         card.addEventListener('click', () => {
             card.classList.toggle('revealed');
         });
     });
-
-    // Handle next question
     nextButton.addEventListener('click', () => {
         currentQuestion++;
         
@@ -192,7 +184,6 @@ document.addEventListener('DOMContentLoaded', () => {
             updateQuestion();
         }
     });
-
-    // Initialize first question
     updateQuestion();
+
 });
